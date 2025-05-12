@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import AdminHeader from "../auth/admin-header";
-import { Scope, SlotStatus } from "@/generated/prisma/client"; // Import SlotStatus enum
+import { Scope } from "@/generated/prisma/client"; // Import SlotStatus enum
 import { cancelSlotBooking, deleteSlotById } from "@/actions/slot";
 import { useActionState, useEffect, useState } from "react";
-import { revokeTokens } from "@/actions/auth";
+import { revokeCalendarToken, revokeTokens } from "@/actions/auth";
 import {
   Calendar,
   Filter,
@@ -14,7 +14,7 @@ import {
   XCircle,
   Layers,
 } from "lucide-react";
-import { format } from "date-fns";
+
 import SlotCard from "./slot-card";
 
 export default function AdminSessionComponent({ user, slots, message }) {
@@ -32,21 +32,10 @@ export default function AdminSessionComponent({ user, slots, message }) {
       setShowMessage(true);
       const timer = setTimeout(() => {
         setShowMessage(false);
-      }, 3000);
+      }, 2000);
       return () => clearTimeout(timer);
     }
   }, [message]);
-
-  const [tokenFormState, tokenAction] = useActionState(revokeTokens, {
-    errors: [],
-    success: false,
-  });
-
-  // Helper function to format date
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return format(date, "EEEE, MMMM d, yyyy 'at' h:mm a");
-  };
 
   // Filter slots based on selected status
   const filteredSlots =
@@ -69,16 +58,7 @@ export default function AdminSessionComponent({ user, slots, message }) {
 
       {/* Calendar connection section */}
       <div className="py-5 w-full bg-bone-700 flex items-center justify-center">
-        {!!calendarToken ? (
-          <form action={tokenAction}>
-            <button
-              type="submit"
-              className="border border-red-500 text-red-500 px-4 py-2 rounded cursor-pointer mx-auto w-fit mt-5"
-            >
-              Revoke Calendar Access
-            </button>
-          </form>
-        ) : (
+        {!calendarToken && (
           <Link
             className="bg-bone-200 text-white px-4 py-2 rounded cursor-pointer mx-auto w-fit"
             href={googleSigninUrl}

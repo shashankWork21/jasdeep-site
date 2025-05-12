@@ -48,7 +48,7 @@ model Slot {
 model Token {
   id           String   @id @default(cuid())
   sessionId    String?
-  session      Session? @relation(fields: [sessionId], references: [id])
+  session      Session? @relation(fields: [sessionId], references: [id], onDelete: SetNull)
   scopes       Scope[]
   accessToken  String
   refreshToken String?

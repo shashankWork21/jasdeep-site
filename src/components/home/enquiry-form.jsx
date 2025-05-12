@@ -12,6 +12,9 @@ export default function EnquiryForm() {
     <div>
       <form className="space-y-4" action={action}>
         <div>
+          <h3 className="text-xl md:text-2xl font-bold text-bone-100 mb-6">
+            Get in Touch
+          </h3>
           <label htmlFor="name" className="block text-bone-200 mb-1">
             Name
           </label>
