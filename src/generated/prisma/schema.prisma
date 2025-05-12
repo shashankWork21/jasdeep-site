@@ -1,0 +1,107 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum SlotStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+}
+
+enum Scope {
+  EMAIL
+  PROFILE
+  OPENID
+  CALENDAR
+}
+
+model Slot {
+  id             String     @id @default(cuid())
+  title          String
+  description    String?
+  start          DateTime
+  end            DateTime
+  status         SlotStatus
+  userEmail      String
+  userName       String
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+  professional   User?      @relation("Professional to Slot mapping", fields: [professionalId], references: [id])
+  professionalId String?
+  meetingLink    String?
+  eventId        String?
+}
+
+model Token {
+  id           String   @id @default(cuid())
+  sessionId    String?
+  session      Session? @relation(fields: [sessionId], references: [id])
+  scopes       Scope[]
+  accessToken  String
+  refreshToken String?
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  expiresAt DateTime
+  tokens    Token[]
+}
+
+model User {
+  id                String    @id @default(cuid())
+  firstName         String
+  lastName          String
+  email             String    @unique
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  passwordHash      String?
+  professionalSlots Slot[]    @relation("Professional to Slot mapping")
+  sessions          Session[]
+  tokens            Token[]
+  schedule          Schedule?
+}
+
+model Schedule {
+  id                String     @id @default(cuid())
+  daysOfWeek        Int[]
+  slotLength        Int
+  startTime         DateTime   @db.Timetz()
+  endTime           DateTime   @db.Timetz()
+  createdAt         DateTime   @default(now())
+  updatedAt         DateTime   @updatedAt
+  professionalId    String     @unique
+  holidays          DateTime[] @db.Timestamptz()
+  breakBetweenSlots Int        @default(0)
+  professional      User       @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+}
+
+model Enquiry {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  message   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
