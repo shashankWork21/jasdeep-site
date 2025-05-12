@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { validateSessionWithoutRedirect } from "@/actions/auth";
 import AdminComponent from "@/components/admin/admin-component";
 import { redirect } from "next/navigation";

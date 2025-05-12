@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { validateSessionWithoutRedirect } from "@/actions/auth";
 import { getSchedule } from "@/actions/schedule";
 import { getSlotById } from "@/actions/slot";

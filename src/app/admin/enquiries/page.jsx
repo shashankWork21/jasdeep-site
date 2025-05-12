@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { getEnquiries } from "@/actions/enquiry";
 import EnquiriesList from "@/components/admin/admin-enquiries";
 
