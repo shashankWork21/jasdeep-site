@@ -1,4 +1,5 @@
 export const dynamic = "force-dynamic";
+
 import { validateSessionWithoutRedirect } from "@/actions/auth";
 import { addExistingEventsToCalendar, getUpcomingSlots } from "@/actions/slot";
 import AdminSessionComponent from "@/components/admin/admin-session-component";

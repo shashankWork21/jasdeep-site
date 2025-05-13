@@ -129,6 +129,7 @@ export default function ClockTimePicker({ selectedTime, onTimeChange }) {
 
       <div className="flex justify-center items-center gap-6 mt-2 mb-2 w-full">
         <button
+          type="button"
           onClick={() => setMode("hours")}
           className={`p-2 rounded-full hover:bg-bone-800 cursor-pointer ${
             mode === "hours" ? "bg-bone-200 text-white" : ""
@@ -140,6 +141,7 @@ export default function ClockTimePicker({ selectedTime, onTimeChange }) {
           {mode === "hours" ? "Hours" : "Minutes"}
         </div>
         <button
+          type="button"
           onClick={() => setMode("minutes")}
           className={`p-2 rounded-full hover:bg-bone-800 cursor-pointer ${
             mode === "minutes" ? "bg-bone-200 text-white" : ""
