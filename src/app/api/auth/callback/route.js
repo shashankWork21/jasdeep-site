@@ -51,7 +51,10 @@ export async function GET(request, response) {
     let user = await db.user.findUnique({ where: { email } });
 
     if (!user) {
-      if (email !== process.env.ADMIN_EMAIL) {
+      const allowedAdminEmails = process.env.ADMIN_EMAILS.split(",").map((e) =>
+        e.trim()
+      );
+      if (!allowedAdminEmails.includes(email)) {
         redirect("/");
       }
       user = await db.user.create({

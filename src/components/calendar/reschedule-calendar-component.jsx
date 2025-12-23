@@ -74,17 +74,19 @@ export default function RescheduleCalendarComponent({
   );
   const [availableSlots, setAvailableSlots] = useState([]);
   const [unavailableDays, setUnavailableDays] = useState(
-    getUnavailableDates(selectedDate, availableSlotsForMonth)
+    getUnavailableDates(monthRef, yearRef, availableSlotsForMonth)
   );
 
-  const handleMonthChange = (month) => {
+  const handleMonthChange = (month, year) => {
+    const effectiveYear = year ?? yearRef;
+    if (year !== undefined) setYearRef(year);
     setMonthRef(month);
-    setSelectedDate(new Date(yearRef, month, 1));
+    setSelectedDate(new Date(effectiveYear, month, 1));
   };
   const handleYearChange = (year) => {
     setYearRef(year);
-    setMonthRef(1);
-    setSelectedDate(new Date(year, 1, 1));
+    setMonthRef(0);
+    setSelectedDate(new Date(year, 0, 1));
   };
 
   useEffect(() => {

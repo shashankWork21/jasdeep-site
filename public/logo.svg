@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#faf2e6"/>
+
+  <!-- Heart -->
+  <path
+    d="M204 176
+       C204 128 156 128 156 176
+       C156 320 204 352 204 352
+       C204 352 252 320 252 176
+       C252 128 204 128 204 176Z"
+    fill="#fa5719"
+    stroke="#353539"
+    stroke-width="16"
+    stroke-linejoin="round"
+  />
+
+  <!-- Brain -->
+  <path
+    d="M308 176
+       C268 128 208 176 228 264
+       C208 312 272 336 316 304
+       C346 336 402 304 380 240
+       C420 208 352 144 308 176Z"
+    fill="#e8dac5"
+    stroke="#353539"
+    stroke-width="16"
+    stroke-linejoin="round"
+  />
+
+  <!-- Arms & handshake -->
+  <path
+    d="M252 240
+       C300 240 332 240 360 224"
+    fill="none"
+    stroke="#353539"
+    stroke-width="16"
+    stroke-linecap="round"
+  />
+  <line x1="248" y1="240" x2="242" y2="248"
+        stroke="#353539" stroke-width="16" stroke-linecap="round"/>
+  <line x1="356" y1="224" x2="362" y2="232"
+        stroke="#353539" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Heart legs -->
+  <line x1="204" y1="352" x2="184" y2="432"
+        stroke="#353539" stroke-width="16" stroke-linecap="round"/>
+  <line x1="252" y1="352" x2="272" y2="432"
+        stroke="#353539" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Brain legs -->
+  <line x1="316" y1="304" x2="296" y2="384"
+        stroke="#353539" stroke-width="16" stroke-linecap="round"/>
+  <line x1="380" y1="304" x2="400" y2="384"
+        stroke="#353539" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Heart face -->
+  <path d="M180 200 C184 192 196 192 200 200"
+        fill="none" stroke="#353539" stroke-width="16" stroke-linecap="round"/>
+  <path d="M212 200 C216 192 228 192 232 200"
+        fill="none" stroke="#353539" stroke-width="16" stroke-linecap="round"/>
+  <path d="M188 228 C204 248 232 248 248 228"
+        fill="none" stroke="#353539" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Brain face -->
+  <path d="M300 200 C304 192 316 192 320 200"
+        fill="none" stroke="#353539" stroke-width="16" stroke-linecap="round"/>
+  <path d="M332 200 C336 192 348 192 352 200"
+        fill="none" stroke="#353539" stroke-width="16" stroke-linecap="round"/>
+  <path d="M308 228 C324 248 352 248 368 228"
+        fill="none" stroke="#353539" stroke-width="16" stroke-linecap="round"/>
+</svg>

@@ -141,7 +141,7 @@ const DatePicker = ({
     const newDate = setMonth(currentDate, monthIndex);
     setCurrentDate(newDate);
     setViewMode("days");
-    onMonthChange && onMonthChange(newDate.getMonth());
+    onMonthChange && onMonthChange(newDate.getMonth(), newDate.getFullYear());
   };
 
   const handleYearSelect = (year) => {
@@ -248,13 +248,19 @@ const DatePicker = ({
       });
       const newMonth = addMonths(displayedMonths[index], 1);
       if (onMonthChange) {
-        setTimeout(() => onMonthChange(newMonth.getMonth()), 0);
+        setTimeout(
+          () => onMonthChange(newMonth.getMonth(), newMonth.getFullYear()),
+          0
+        );
       }
     } else {
       const newDate = subMonths(currentDate, 1);
       setCurrentDate(newDate);
       if (onMonthChange) {
-        setTimeout(() => onMonthChange(newDate.getMonth()), 0);
+        setTimeout(
+          () => onMonthChange(newDate.getMonth(), newDate.getFullYear()),
+          0
+        );
       }
     }
   };
@@ -269,14 +275,20 @@ const DatePicker = ({
       });
       const newMonth = addMonths(displayedMonths[index], 1);
       if (onMonthChange) {
-        setTimeout(() => onMonthChange(newMonth.getMonth()), 0);
+        setTimeout(
+          () => onMonthChange(newMonth.getMonth(), newMonth.getFullYear()),
+          0
+        );
       }
     } else {
       const newDate = addMonths(currentDate, 1);
       setCurrentDate(newDate);
 
       if (onMonthChange) {
-        setTimeout(() => onMonthChange(newDate.getMonth()), 0);
+        setTimeout(
+          () => onMonthChange(newDate.getMonth(), newDate.getFullYear()),
+          0
+        );
       }
     }
   };
@@ -518,7 +530,7 @@ const DatePicker = ({
       <div className="flex justify-center space-x-3 my-3">
         <button
           type="button"
-          className="border-1 border-bone-200 text-bone-200 px-2 rounded-lg mx-auto py-1 text-sm cursor-pointer hover:bg-bone-600"
+          className="border border-bone-200 text-bone-200 px-2 rounded-lg mx-auto py-1 text-sm cursor-pointer hover:bg-bone-600"
           onClick={() => {
             setSelectingEnd(false);
             setStartDate(Date.now());

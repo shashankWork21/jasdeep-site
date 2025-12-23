@@ -1,0 +1,6 @@
+<!-- Logo 2: Concentric Arcs (growth & inner journey) -->
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <path d="M60,60 m-30,0 a30,30 0 1,1 60,0" stroke="#fa5719" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M60,60 m-20,0 a20,20 0 1,0 40,0" stroke="#fa5719" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M60,60 m-10,0 a10,10 0 1,1 20,0" stroke="#fa5719" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

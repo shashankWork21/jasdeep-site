@@ -67,6 +67,18 @@ export default function AdminSessionComponent({ user, slots, message }) {
           </Link>
         )}
       </div>
+      {calendarToken && (
+        <div className="py-5 w-full bg-bone-700 flex items-center justify-center">
+          <button
+            onClick={async () => {
+              await revokeCalendarToken(user.id);
+            }}
+            className="bg-red-500 text-white px-4 py-2 rounded cursor-pointer mx-auto w-fit"
+          >
+            Disconnect Calendar
+          </button>
+        </div>
+      )}
 
       {/* Message display */}
       {message && showMessage && (

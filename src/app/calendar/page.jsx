@@ -12,6 +12,7 @@ export default async function CalendarPage() {
       </div>
     );
   }
+  console.log("Professional:", professional);
   const schedule = await getSchedule(professional.id);
   return (
     <div className="min-h-screen bg-bone-700 py-5">
