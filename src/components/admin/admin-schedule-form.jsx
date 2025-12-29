@@ -196,7 +196,7 @@ export default function AdminScheduleForm({
           <div
             className={`overflow-hidden transition-all duration-300 ease-in-out ${
               editStartTime
-                ? "max-h-[600px] opacity-100 transform translate-y-0"
+                ? "max-h-150 opacity-100 transform translate-y-0"
                 : "max-h-0 opacity-0 transform -translate-y-20"
             }`}
           >
@@ -225,7 +225,7 @@ export default function AdminScheduleForm({
           <div
             className={`overflow-hidden transition-all duration-300 ease-in-out ${
               editEndTime
-                ? "max-h-[600px] opacity-100 transform translate-y-0"
+                ? "max-h-150 opacity-100 transform translate-y-0"
                 : "max-h-0 opacity-0 transform -translate-y-20"
             }`}
           >

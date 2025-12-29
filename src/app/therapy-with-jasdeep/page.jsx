@@ -18,9 +18,9 @@ import Footer from "@/components/footer";
 
 export default function TherapyPage() {
   return (
-    <div className="min-h-screen bg-bone-700">
+    <div className="min-h-screen bg-white">
       <Header />
-      <section className=" text-bone-200 py-8 md:py-12">
+      <section className=" text-gray-700 py-8 md:py-12">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <h1 className="text-4xl md:text-5xl font-bold">
             Therapy with Jasdeep
@@ -29,17 +29,17 @@ export default function TherapyPage() {
       </section>
 
       {/* What is Therapy Section */}
-      <section className="py-12 md:py-16 text-bone-200">
+      <section className="py-12 md:py-16 text-gray-700">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <div className="flex items-center mb-6">
-            <Heart size={24} className="text-giants-orange mr-3" />
-            <h2 className="text-3xl font-bold text-bone-100">
+            <Heart size={24} className="text-[#fa5719] mr-3" />
+            <h2 className="text-3xl font-bold text-gray-900">
               What is Therapy?
             </h2>
           </div>
 
-          <div className="bg-white bg-opacity-60 shadow-sm p-8 rounded-xl mb-16">
-            <p className="text-lg text-bone-100 leading-relaxed">
+          <div className="bg-gray-50 shadow-sm p-8 rounded-xl mb-16">
+            <p className="text-lg text-gray-900 leading-relaxed">
               Therapy is a collaborative process designed to help you gain
               insight, develop coping strategies, and create meaningful change
               in your life. It's a safe, judgment-free space where you can
@@ -52,14 +52,14 @@ export default function TherapyPage() {
 
           {/* Discovery Call Section */}
           <div className="flex items-center mb-6">
-            <Phone size={24} className="text-giants-orange mr-3" />
-            <h2 className="text-3xl font-bold text-bone-100">
+            <Phone size={24} className="text-[#fa5719] mr-3" />
+            <h2 className="text-3xl font-bold text-gray-900">
               What is a Discovery Call?
             </h2>
           </div>
 
-          <div className="bg-white bg-opacity-60 shadow-sm p-8 rounded-xl mb-8">
-            <p className="text-lg text-bone-100 leading-relaxed mb-8">
+          <div className="bg-gray-50 shadow-sm p-8 rounded-xl mb-8">
+            <p className="text-lg text-gray-900 leading-relaxed mb-8">
               A discovery call is a 15-20 minute initial conversation to help
               you understand if therapy with Jasdeep is the right fit for you.
               During this call, you can share a bit about what brings you to
@@ -70,22 +70,24 @@ export default function TherapyPage() {
             </p>
 
             <div className="text-center">
-              <Link
-                href="/calendar"
-                className="bg-giants-orange hover:bg-giants-orange-300 text-white text-xl font-medium px-8 py-3 rounded-md inline-block transition-colors shadow-md"
+              <a
+                href="https://wa.me/919004025163"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#fa5719] hover:bg-[#fb7a47] text-white text-xl font-medium px-8 py-3 rounded-md inline-block transition-colors shadow-md"
               >
                 Book a Discovery Call Now
-              </Link>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Therapy Approach Section */}
-      <section className="py-12 text-bone-100">
+      <section className="py-12 text-gray-900">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <div className="flex items-center mb-8">
-            <BrainCircuit size={24} className="text-giants-orange mr-3" />
+            <BrainCircuit size={24} className="text-[#fa5719] mr-3" />
             <h2 className="text-3xl font-bold">
               Jasdeep's Therapy Approach & Modalities
             </h2>
@@ -98,27 +100,27 @@ export default function TherapyPage() {
             past as a tool to uncover patterns that shape your present.
           </p>
 
-          <div className="bg-white bg-opacity-60 shadow-sm p-8 rounded-xl mb-10 text-lg">
+          <div className="bg-gray-50 shadow-sm p-8 rounded-xl mb-10 text-lg">
             <h3 className="text-2xl font-semibold mb-4">
               This approach helps you:
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <span className="text-giants-orange text-xl mr-3">🔍</span>
+                <span className="text-[#fa5719] text-xl mr-3">🔍</span>
                 <span>
                   Recognize unconscious patterns that influence your emotions,
                   relationships, and decisions.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-giants-orange text-xl mr-3">👶</span>
+                <span className="text-[#fa5719] text-xl mr-3">👶</span>
                 <span>
                   Access and heal the wounded inner child—the part of you
                   carrying unresolved pain, fear, and unmet needs.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-giants-orange text-xl mr-3">🌱</span>
+                <span className="text-[#fa5719] text-xl mr-3">🌱</span>
                 <span>
                   Learn, adapt, and grow using past insights to make empowered
                   choices today.
@@ -131,30 +133,30 @@ export default function TherapyPage() {
             To create deep, lasting change, Jasdeep integrates:
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-lg">
-            <div className="bg-white bg-opacity-60 shadow-sm p-6 rounded-xl">
+            <div className="bg-gray-50 shadow-sm p-6 rounded-xl">
               <h4 className="font-medium mb-2">Inner Child Healing</h4>
-              <p className="text-bone-200">
+              <p className="text-gray-700">
                 Understanding and nurturing the younger parts of yourself that
                 still seek safety and validation.
               </p>
             </div>
-            <div className="bg-white bg-opacity-60 shadow-sm p-6 rounded-xl">
+            <div className="bg-gray-50 shadow-sm p-6 rounded-xl">
               <h4 className="font-medium mb-2">Somatic Exercises</h4>
-              <p className="text-bone-200">
+              <p className="text-gray-700">
                 Connecting the mind and body to release stored trauma and
                 regulate emotions.
               </p>
             </div>
-            <div className="bg-white bg-opacity-60 shadow-sm p-6 rounded-xl">
+            <div className="bg-gray-50 shadow-sm p-6 rounded-xl">
               <h4 className="font-medium mb-2">Trauma-Informed Therapy</h4>
-              <p className="text-bone-200">
+              <p className="text-gray-700">
                 Providing a safe space to explore past wounds while focusing on
                 present resilience.
               </p>
             </div>
           </div>
 
-          <div className="bg-white bg-opacity-60 shadow-sm p-8 rounded-xl mb-6 text-lg">
+          <div className="bg-gray-50 shadow-sm p-8 rounded-xl mb-6 text-lg">
             <h3 className="text-xl font-semibold mb-4">
               This approach is ideal if you're struggling with:
             </h3>
@@ -188,19 +190,19 @@ export default function TherapyPage() {
             <div>
               <div className="flex items-center mb-6">
                 <Check size={24} className="text-green-600 mr-3" />
-                <h3 className="text-2xl font-bold text-bone-100">
+                <h3 className="text-2xl font-bold text-gray-900">
                   What Can You Expect
                 </h3>
               </div>
 
-              <div className="bg-white bg-opacity-60 shadow-sm p-6 rounded-xl">
+              <div className="bg-gray-50 shadow-sm p-6 rounded-xl">
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <Check
                       size={18}
                       className="text-green-600 mt-1 mr-3 flex-shrink-0"
                     />
-                    <span className="text-bone-200">
+                    <span className="text-gray-700">
                       A warm, empathetic, and non-judgmental environment where
                       you can be yourself.
                     </span>
@@ -210,7 +212,7 @@ export default function TherapyPage() {
                       size={18}
                       className="text-green-600 mt-1 mr-3 flex-shrink-0"
                     />
-                    <span className="text-bone-200">
+                    <span className="text-gray-700">
                       A science-backed, trauma-informed approach that integrates
                       neuropsychology and emotional intelligence.
                     </span>
@@ -220,7 +222,7 @@ export default function TherapyPage() {
                       size={18}
                       className="text-green-600 mt-1 mr-3 flex-shrink-0"
                     />
-                    <span className="text-bone-200">
+                    <span className="text-gray-700">
                       Active collaboration in setting goals and working toward
                       meaningful personal or relational growth.
                     </span>
@@ -230,7 +232,7 @@ export default function TherapyPage() {
                       size={18}
                       className="text-green-600 mt-1 mr-3 flex-shrink-0"
                     />
-                    <span className="text-bone-200">
+                    <span className="text-gray-700">
                       Practical tools and techniques to help you navigate
                       challenges and build emotional resilience.
                     </span>
@@ -240,7 +242,7 @@ export default function TherapyPage() {
                       size={18}
                       className="text-green-600 mt-1 mr-3 flex-shrink-0"
                     />
-                    <span className="text-bone-200">
+                    <span className="text-gray-700">
                       A focus on self-awareness, behavioral patterns, and
                       relational dynamics to create long-lasting change.
                     </span>
@@ -252,19 +254,19 @@ export default function TherapyPage() {
             <div>
               <div className="flex items-center mb-6">
                 <X size={24} className="text-red-600 mr-3" />
-                <h3 className="text-2xl font-bold text-bone-100">
+                <h3 className="text-2xl font-bold text-gray-900">
                   What NOT to Expect
                 </h3>
               </div>
 
-              <div className="bg-white bg-opacity-60 p-6 rounded-xl shadow-sm">
+              <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <X
                       size={18}
                       className="text-red-600 mt-1 mr-3 flex-shrink-0"
                     />
-                    <span className="text-bone-200">
+                    <span className="text-gray-700">
                       Quick fixes or instant solutions—therapy is a process that
                       unfolds over time.
                     </span>
@@ -274,7 +276,7 @@ export default function TherapyPage() {
                       size={18}
                       className="text-red-600 mt-1 mr-3 flex-shrink-0"
                     />
-                    <span className="text-bone-200">
+                    <span className="text-gray-700">
                       Generic advice or one-size-fits-all approaches—each
                       session is tailored to your unique needs.
                     </span>
@@ -284,7 +286,7 @@ export default function TherapyPage() {
                       size={18}
                       className="text-red-600 mt-1 mr-3 flex-shrink-0"
                     />
-                    <span className="text-bone-200">
+                    <span className="text-gray-700">
                       A passive listener—Jasdeep actively engages in the
                       therapeutic process to challenge and support you.
                     </span>
@@ -294,7 +296,7 @@ export default function TherapyPage() {
                       size={18}
                       className="text-red-600 mt-1 mr-3 flex-shrink-0"
                     />
-                    <span className="text-bone-200">
+                    <span className="text-gray-700">
                       Diagnosing or prescribing medication—while Jasdeep can
                       help you understand mental health conditions, she is not a
                       psychiatrist.
@@ -308,10 +310,10 @@ export default function TherapyPage() {
       </section>
 
       {/* Who Should Come Section */}
-      <section className="py-16 text-bone-100">
+      <section className="py-16 text-gray-900">
         <div className="max-w-6xl mx-auto px-6 md:px-12 text-lg">
           <div className="flex items-center mb-8">
-            <Users size={24} className="text-giants-orange mr-3" />
+            <Users size={24} className="text-[#fa5719] mr-3" />
             <h2 className="text-3xl font-bold">
               Who Should Come to Jasdeep for Therapy?
             </h2>
@@ -322,30 +324,30 @@ export default function TherapyPage() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white bg-opacity-60 shadow-sm p-6 rounded-xl">
+            <div className="bg-gray-50 shadow-sm p-6 rounded-xl">
               <p>Anxiety, stress, and emotional regulation challenges.</p>
             </div>
-            <div className="bg-white bg-opacity-60 shadow-sm p-6 rounded-xl">
+            <div className="bg-gray-50 shadow-sm p-6 rounded-xl">
               <p>
                 Relationship struggles, including communication breakdowns and
                 trust issues.
               </p>
             </div>
-            <div className="bg-white bg-opacity-60 shadow-sm p-6 rounded-xl">
+            <div className="bg-gray-50 shadow-sm p-6 rounded-xl">
               <p>
                 Premarital concerns or strengthening a marriage/partnership.
               </p>
             </div>
-            <div className="bg-white bg-opacity-60 shadow-sm p-6 rounded-xl">
+            <div className="bg-gray-50 shadow-sm p-6 rounded-xl">
               <p>Trauma, past experiences, and self-worth exploration.</p>
             </div>
-            <div className="bg-white bg-opacity-60 shadow-sm p-6 rounded-xl">
+            <div className="bg-gray-50 shadow-sm p-6 rounded-xl">
               <p>
                 Workplace stress, burnout, and emotional intelligence
                 development.
               </p>
             </div>
-            <div className="bg-white bg-opacity-60 shadow-sm p-6 rounded-xl">
+            <div className="bg-gray-50 shadow-sm p-6 rounded-xl">
               <p>Life transitions, personal growth, and self-discovery.</p>
             </div>
           </div>
@@ -354,12 +356,12 @@ export default function TherapyPage() {
             Individual Therapy vs. Couples Therapy
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white bg-opacity-60 shadow-sm p-6 rounded-xl">
+            <div className="bg-gray-50 shadow-sm p-6 rounded-xl">
               <div className="flex items-center mb-4">
-                <User size={20} className="text-giants-orange mr-2" />
+                <User size={20} className="text-[#fa5719] mr-2" />
                 <h4 className="text-xl font-medium">Individual Therapy</h4>
               </div>
-              <p className="text-bone-200">
+              <p className="text-gray-700">
                 A space for self-exploration, healing, and personal growth. It
                 helps address emotions, thought patterns, and behaviors that
                 impact your well-being. Sessions focus on building
@@ -367,12 +369,12 @@ export default function TherapyPage() {
               </p>
             </div>
 
-            <div className="bg-white bg-opacity-60 shadow-sm p-6 rounded-xl">
+            <div className="bg-gray-50 shadow-sm p-6 rounded-xl">
               <div className="flex items-center mb-4">
-                <Users size={20} className="text-giants-orange mr-2" />
+                <Users size={20} className="text-[#fa5719] mr-2" />
                 <h4 className="text-xl font-medium">Couples Therapy</h4>
               </div>
-              <p className="text-bone-200">
+              <p className="text-gray-700">
                 Designed for partners who want to improve their relationship,
                 resolve conflicts, or rebuild trust. Sessions focus on
                 communication, emotional connection, and navigating challenges
@@ -384,15 +386,17 @@ export default function TherapyPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
-          <Link
-            href="/calendar"
-            className="bg-giants-orange hover:bg-giants-orange-300 text-white text-lg font-medium px-8 py-3 rounded-md inline-flex items-center transition-colors shadow-md"
+          <a
+            href="https://wa.me/919004025163"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#fa5719] hover:bg-[#fb7a47] text-white text-lg font-medium px-8 py-3 rounded-md inline-flex items-center transition-colors shadow-md"
           >
             BOOK A DISCOVERY CALL NOW
             <ArrowRight size={18} className="ml-2" />
-          </Link>
+          </a>
         </div>
       </section>
       <Footer />

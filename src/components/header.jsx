@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -25,20 +26,24 @@ export default function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className="bg-bone-700 sticky top-0 z-50 py-5">
+    <header className="bg-white sticky top-0 z-50 py-5 shadow-sm">
       {/* Main header always visible */}
       <div className="py-4 px-6 md:px-12">
         <div className="max-w-8xl mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <Link href="/">Logo</Link>
-            <span className="text-2xl font-semibold text-bone-200">
-              Therapy with Jasdeep
-            </span>
-          </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/jasdeep-logo.png"
+              alt="Jasdeep Mago - Neuropsychologist, Psychotherapist & Relationship Coach"
+              width={200}
+              height={80}
+              className="h-16 w-auto"
+              priority
+            />
+          </Link>
 
           <div className="flex items-center gap-4">
             <button
-              className="menu-button text-bone-200 hover:text-bone-100 transition-colors p-2 rounded-full hover:bg-bone-800/10 cursor-pointer"
+              className="menu-button text-gray-700 hover:text-gray-900 transition-colors p-2 rounded-full hover:bg-gray-100 cursor-pointer"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Navigation menu"
               aria-expanded={isMenuOpen}
@@ -46,12 +51,14 @@ export default function Header() {
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
 
-            <Link
-              href="/calendar"
-              className="bg-giants-orange hover:bg-giants-orange-300 text-white px-4 py-2 rounded-md shadow-lg transition-colors"
+            <a
+              href="https://wa.me/919004025163"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#fa5719] hover:bg-[#fb7a47] text-white px-4 py-2 rounded-md shadow-lg transition-colors"
             >
               Book a Call
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -62,12 +69,12 @@ export default function Header() {
           isMenuOpen ? "max-h-96" : "max-h-0"
         }`}
       >
-        <nav className="px-6 md:px-12 py-4 bg-bone-700 backdrop-blur-sm">
+        <nav className="px-6 md:px-12 py-4 bg-white backdrop-blur-sm border-t border-gray-200">
           <ul className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
             <li>
               <Link
                 href="/about"
-                className="block text-lg text-bone-200 hover:text-giants-orange transition-colors py-3 px-4 rounded-md hover:bg-bone-700/10"
+                className="block text-lg text-gray-700 hover:text-[#fa5719] transition-colors py-3 px-4 rounded-md hover:bg-gray-50"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Jasdeep
@@ -76,7 +83,7 @@ export default function Header() {
             <li>
               <Link
                 href="/therapy-with-jasdeep"
-                className="block text-lg text-bone-200 hover:text-giants-orange transition-colors py-3 px-4 rounded-md hover:bg-bone-700/10"
+                className="block text-lg text-gray-700 hover:text-[#fa5719] transition-colors py-3 px-4 rounded-md hover:bg-gray-50"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Therapy With Jasdeep
@@ -85,7 +92,7 @@ export default function Header() {
             <li>
               <Link
                 href="/workshops"
-                className="block text-lg text-bone-200 hover:text-giants-orange transition-colors py-3 px-4 rounded-md hover:bg-bone-700/10"
+                className="block text-lg text-gray-700 hover:text-[#fa5719] transition-colors py-3 px-4 rounded-md hover:bg-gray-50"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Workshops

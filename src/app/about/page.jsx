@@ -5,34 +5,49 @@ import Footer from "@/components/footer";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Header />
-      <div className="bg-bone-700">
+      <div className="bg-white">
         <div className="max-w-6xl mx-auto px-6 md:px-12 py-12 md:py-16">
-          {/* Personal Story */}
+          {/* Personal Story with Photo */}
           <section className="mb-16">
-            <h1 className="text-4xl md:text-5xl w-full text-center font-bold mb-12 text-bone-200">
+            <h1 className="text-4xl md:text-5xl w-full text-center font-bold mb-12 text-gray-900">
               About Jasdeep
             </h1>
-            <p className="text-xl md:text-2xl mb-12 text-center text-bone-200">
+            <p className="text-xl md:text-2xl mb-12 text-center text-gray-800">
               A therapist who believes in the power of authentic connection and
               the healing that comes from truly being seen.
             </p>
-            <p className="text-xl text-bone-100 mb-6">
-              Jasdeep never set out to become a therapist in the conventional
-              sense. What began as a deep curiosity about the human mind,
-              emotions, and relationships slowly evolved into a lifelong
-              commitment—to understand people, to hold space for them, and to
-              help them reconnect with the parts of themselves they'd forgotten
-              or pushed away.
-            </p>
 
-            <div className="relative my-10 md:my-16 px-6 md:px-12 py-8 bg-gradient-to-br from-white to-old-lace-900 rounded-xl">
+            {/* Photo and intro text side by side */}
+            <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
+              <div className="md:w-1/3">
+                <Image
+                  src="/jasdeep-photo.jpeg"
+                  alt="Jasdeep Mago - Neuropsychologist, Psychotherapist & Relationship Coach"
+                  width={400}
+                  height={400}
+                  className="rounded-xl shadow-lg"
+                />
+              </div>
+              <div className="md:w-2/3">
+                <p className="text-xl text-gray-700 mb-6">
+                  Jasdeep never set out to become a therapist in the
+                  conventional sense. What began as a deep curiosity about the
+                  human mind, emotions, and relationships slowly evolved into a
+                  lifelong commitment—to understand people, to hold space for
+                  them, and to help them reconnect with the parts of themselves
+                  they'd forgotten or pushed away.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative my-10 md:my-16 px-6 md:px-12 py-8 bg-gray-50 rounded-xl border border-gray-200">
               <Quote
-                className="absolute text-bone-200 top-4 left-4"
+                className="absolute text-gray-600 top-4 left-4"
                 size={24}
               />
-              <p className="text-xl md:text-3xl font-bold text-bone-200 text-center">
+              <p className="text-xl md:text-3xl font-bold text-gray-800 text-center">
                 "At the heart of every psychological concern lies a version of
                 the self shaped by those we have loved and those who raised us."
               </p>
@@ -42,15 +57,15 @@ export default function AboutPage() {
           {/* Education & Training */}
           <section className="mb-16">
             <div className="flex items-center mb-8">
-              <GraduationCap className="text-giants-orange mr-3" size={28} />
-              <h2 className="text-3xl font-semibold text-bone-100">
+              <GraduationCap className="text-[#fa5719] mr-3" size={28} />
+              <h2 className="text-3xl font-semibold text-gray-900">
                 Education & Training
               </h2>
             </div>
 
-            <div className="space-y-6 text-bone-200">
-              <div className="bg-gradient-to-br from-white to-old-lace-900 p-6 rounded-lg border border-bone-700">
-                <h3 className="text-xl font-medium text-bone-100 mb-2 ">
+            <div className="space-y-6 text-gray-700">
+              <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <h3 className="text-xl font-medium text-gray-900 mb-2 ">
                   Academic Qualifications
                 </h3>
                 <p className="text-lg">
@@ -63,8 +78,8 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-white to-old-lace-900 p-6 rounded-lg border border-bone-700">
-                <h3 className="text-xl font-medium text-bone-100 mb-2 ">
+              <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <h3 className="text-xl font-medium text-gray-900 mb-2 ">
                   Therapeutic Training
                 </h3>
                 <ul className="list-disc pl-5 space-y-1 text-lg">
@@ -85,13 +100,13 @@ export default function AboutPage() {
           {/* Experience */}
           <section className="mb-16">
             <div className="flex items-center mb-8">
-              <Brain className="text-giants-orange mr-3" size={28} />
-              <h2 className="text-3xl font-semibold text-bone-100">
+              <Brain className="text-[#fa5719] mr-3" size={28} />
+              <h2 className="text-3xl font-semibold text-gray-900">
                 Professional Experience
               </h2>
             </div>
 
-            <div className="space-y-8 text-bone-200 text-lg">
+            <div className="space-y-8 text-gray-700 text-lg">
               <p>
                 Her early years were spent working in neurorehabilitation,
                 supporting stroke, dementia, and epilepsy patients—gaining
@@ -99,8 +114,8 @@ export default function AboutPage() {
                 worlds are impacted when the brain undergoes change.
               </p>
 
-              <div className="bg-gradient-to-br from-white to-old-lace-900 p-6 rounded-lg border-l-4 border-bone border ">
-                <h3 className="text-xl font-medium text-bone-100 mb-2">
+              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#fa5719]">
+                <h3 className="text-xl font-medium text-gray-900 mb-2">
                   Leadership in Mental Health
                 </h3>
                 <p>
@@ -112,8 +127,8 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-white to-old-lace-900 p-6 rounded-lg border-l-4 border-bone border">
-                <h3 className="text-xl font-medium text-bone-100 mb-2">
+              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#fa5719]">
+                <h3 className="text-xl font-medium text-gray-900 mb-2">
                   Community Impact
                 </h3>
                 <p>
@@ -124,8 +139,8 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-white to-old-lace-900 p-6 rounded-lg border-l-4 border-bone border">
-                <h3 className="text-xl font-medium text-bone-100 mb-2">
+              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#fa5719]">
+                <h3 className="text-xl font-medium text-gray-900 mb-2">
                   Workshop Facilitation
                 </h3>
                 <p>
@@ -142,13 +157,13 @@ export default function AboutPage() {
           {/* Approach */}
           <section className="mb-16">
             <div className="flex items-center mb-8">
-              <Heart className="text-giants-orange mr-3" size={28} />
-              <h2 className="text-3xl font-semibold text-bone-100">
+              <Heart className="text-[#fa5719] mr-3" size={28} />
+              <h2 className="text-3xl font-semibold text-gray-900">
                 Therapeutic Approach
               </h2>
             </div>
 
-            <div className="space-y-6 text-bone-200 text-lg">
+            <div className="space-y-6 text-gray-700 text-lg">
               <p>
                 Through her private therapy practice, Jasdeep has worked with
                 adults from their 20s to their 50s—individuals navigating a wide
@@ -177,26 +192,26 @@ export default function AboutPage() {
           {/* Philosophy */}
           <section className="mb-10 text-lg">
             <div className="flex items-center mb-8">
-              <Users className="text-giants-orange mr-3" size={28} />
-              <h2 className="text-3xl font-semibold text-bone-100">
+              <Users className="text-[#fa5719] mr-3" size={28} />
+              <h2 className="text-3xl font-semibold text-gray-900">
                 Philosophy
               </h2>
             </div>
 
-            <p className="text-bone-200 mb-10">
+            <p className="text-gray-700 mb-10">
               Her work now is devoted to redefining what love, commitment, and
               connection can look like in today's world. Not through idealism,
               but through honest exploration, practical tools, and deep
               emotional work.
             </p>
 
-            <div className="bg-gradient-to-br from-white to-old-lace-900 shadow-sm text-bone-200 p-8 rounded-xl border border-bone-700">
-              <Quote className="text-bone-200 mb-2" size={32} />
+            <div className="bg-gray-50 shadow-sm text-gray-800 p-8 rounded-xl border border-gray-200">
+              <Quote className="text-gray-600 mb-2" size={32} />
               <p className="text-2xl md:text-3xl font-bold">
                 "I don't believe in labels. I believe in people. People who need
                 to be loved, understood, and shown a way back to themselves."
               </p>
-              <p className="mt-4 text-center text-bone-200 text-lg">
+              <p className="mt-4 text-center text-gray-700 text-lg">
                 This isn't just her philosophy—it's the energy she brings into
                 every session, every group, and every space she holds.
               </p>
