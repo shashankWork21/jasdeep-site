@@ -19,19 +19,19 @@ export default function AboutPage() {
               the healing that comes from truly being seen.
             </p>
 
-            {/* Photo and intro text side by side */}
-            <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
-              <div className="md:w-1/3">
+            {/* Photo and Education & Training side by side */}
+            <div className="flex flex-col md:flex-row items-start gap-8 mb-8">
+              <div className="md:w-1/3 flex-shrink-0">
                 <Image
                   src="/jasdeep-photo.jpeg"
                   alt="Jasdeep Mago - Neuropsychologist, Psychotherapist & Relationship Coach"
                   width={400}
-                  height={400}
-                  className="rounded-xl shadow-lg"
+                  height={600}
+                  className="rounded-xl shadow-lg w-full h-auto"
                 />
               </div>
               <div className="md:w-2/3">
-                <p className="text-xl text-gray-700 mb-6">
+                <p className="text-lg text-gray-700 mb-5">
                   Jasdeep never set out to become a therapist in the
                   conventional sense. What began as a deep curiosity about the
                   human mind, emotions, and relationships slowly evolved into a
@@ -39,6 +39,49 @@ export default function AboutPage() {
                   them, and to help them reconnect with the parts of themselves
                   they'd forgotten or pushed away.
                 </p>
+
+                {/* Education & Training */}
+                <div>
+                  <div className="flex items-center mb-3">
+                    <GraduationCap className="text-[#fa5719] mr-2" size={22} />
+                    <h2 className="text-xl font-semibold text-gray-900">
+                      Education & Training
+                    </h2>
+                  </div>
+
+                  <div className="space-y-3 text-gray-700">
+                    <div className="bg-gray-50 p-3 rounded-lg border border-gray-200">
+                      <h3 className="text-base font-medium text-gray-900 mb-1.5">
+                        Academic Qualifications
+                      </h3>
+                      <p className="text-sm mb-1">
+                        Master's degree in Clinical Neuropsychology from Bangor
+                        University, Wales (UK)
+                      </p>
+                      <p className="text-sm">
+                        Diploma in Emotional Intelligence & Brain-Based Coaching from
+                        the NeuroLeadership Institute, Australia
+                      </p>
+                    </div>
+
+                    <div className="bg-gray-50 p-3 rounded-lg border border-gray-200">
+                      <h3 className="text-base font-medium text-gray-900 mb-1.5">
+                        Therapeutic Training
+                      </h3>
+                      <ul className="list-disc pl-5 space-y-0.5 text-sm">
+                        <li>Psychoanalytic and Psychodynamic Therapy</li>
+                        <li>Cognitive Behavioural Therapy (CBT)</li>
+                        <li>Narrative Therapy (Externalisation Approach)</li>
+                        <li>Gestalt Approach</li>
+                        <li>Bowenian Model for Couples</li>
+                        <li>
+                          Specialized Training for Working with Child Sexual Abuse
+                          Survivors
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -51,49 +94,6 @@ export default function AboutPage() {
                 "At the heart of every psychological concern lies a version of
                 the self shaped by those we have loved and those who raised us."
               </p>
-            </div>
-          </section>
-
-          {/* Education & Training */}
-          <section className="mb-16">
-            <div className="flex items-center mb-8">
-              <GraduationCap className="text-[#fa5719] mr-3" size={28} />
-              <h2 className="text-3xl font-semibold text-gray-900">
-                Education & Training
-              </h2>
-            </div>
-
-            <div className="space-y-6 text-gray-700">
-              <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                <h3 className="text-xl font-medium text-gray-900 mb-2 ">
-                  Academic Qualifications
-                </h3>
-                <p className="text-lg">
-                  Master's degree in Clinical Neuropsychology from Bangor
-                  University, Wales (UK)
-                </p>
-                <p className="text-lg">
-                  Diploma in Emotional Intelligence & Brain-Based Coaching from
-                  the NeuroLeadership Institute, Australia
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                <h3 className="text-xl font-medium text-gray-900 mb-2 ">
-                  Therapeutic Training
-                </h3>
-                <ul className="list-disc pl-5 space-y-1 text-lg">
-                  <li>Psychoanalytic and Psychodynamic Therapy</li>
-                  <li>Cognitive Behavioural Therapy (CBT)</li>
-                  <li>Narrative Therapy (Externalisation Approach)</li>
-                  <li>Gestalt Approach</li>
-                  <li>Bowenian Model for Couples</li>
-                  <li>
-                    Specialized Training for Working with Child Sexual Abuse
-                    Survivors
-                  </li>
-                </ul>
-              </div>
             </div>
           </section>
 
