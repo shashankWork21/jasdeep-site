@@ -58,12 +58,16 @@ export default function CalendarComponent({ schedule }) {
       monthRef,
       yearRef,
       slots,
-      schedule.slotLength,
-      new Date(schedule.startTime),
-      new Date(schedule.endTime),
-      schedule.daysOfWeek,
-      schedule.holidays.map((date) => new Date(date)),
-      schedule.breakBetweenSlots
+      schedule?.slotLength || 0,
+      schedule?.startTime ? new Date(schedule?.startTime) : new Date(),
+      schedule?.endTime
+        ? new Date(schedule?.endTime)
+        : new Date(Date.now() + 8 * 60 * 60 * 1000),
+      schedule?.daysOfWeek || [],
+      schedule?.holidays
+        ? schedule?.holidays.map((date) => new Date(date))
+        : [],
+      schedule?.breakBetweenSlots || 0
     )
   );
   const [availableSlots, setAvailableSlots] = useState([]);

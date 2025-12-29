@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import FaqSection from "@/components/home/faq-section";
 import Header from "@/components/header";
@@ -45,7 +44,7 @@ export default function Home() {
                   href="https://wa.me/919004025163"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#fa5719] hover:bg-[#fb7a47] text-white text-xl px-8 py-3 rounded-md inline-block transition-colors shadow-lg"
+                  className="bg-[#fa5719] hover:bg-giants-orange-600 text-white text-xl px-8 py-3 rounded-md inline-block transition-colors shadow-lg"
                 >
                   Book a Free Discovery Call
                 </a>
@@ -115,7 +114,7 @@ export default function Home() {
             href="https://wa.me/919004025163"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#fa5719] hover:bg-[#fb7a47] text-white text-xl px-8 py-4 rounded-md inline-block transition-colors"
+            className="bg-[#fa5719] hover:bg-giants-orange-600 text-white text-xl px-8 py-4 rounded-md inline-block transition-colors"
           >
             Book a Free Discovery Call
           </a>
