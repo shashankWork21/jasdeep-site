@@ -35,7 +35,7 @@ export default function AboutPage() {
                   Jasdeep never set out to become a therapist in the
                   conventional sense. What began as a deep curiosity about the
                   human mind, emotions, and relationships slowly evolved into a
-                  lifelong commitment—to understand people, to hold space for
+                  lifelong commitmentto understand people, to hold space for
                   them, and to help them reconnect with the parts of themselves
                   they'd forgotten or pushed away.
                 </p>
@@ -59,8 +59,8 @@ export default function AboutPage() {
                         University, Wales (UK)
                       </p>
                       <p className="text-sm">
-                        Diploma in Emotional Intelligence & Brain-Based Coaching from
-                        the NeuroLeadership Institute, Australia
+                        Diploma in Emotional Intelligence & Brain-Based Coaching
+                        from the NeuroLeadership Institute, Australia
                       </p>
                     </div>
 
@@ -75,8 +75,8 @@ export default function AboutPage() {
                         <li>Gestalt Approach</li>
                         <li>Bowenian Model for Couples</li>
                         <li>
-                          Specialized Training for Working with Child Sexual Abuse
-                          Survivors
+                          Specialized Training for Working with Child Sexual
+                          Abuse Survivors
                         </li>
                       </ul>
                     </div>
