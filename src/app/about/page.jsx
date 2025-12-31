@@ -35,7 +35,7 @@ export default function AboutPage() {
                   Jasdeep never set out to become a therapist in the
                   conventional sense. What began as a deep curiosity about the
                   human mind, emotions, and relationships slowly evolved into a
-                  lifelong commitmentto understand people, to hold space for
+                  lifelong commitment to understand people, to hold space for
                   them, and to help them reconnect with the parts of themselves
                   they'd forgotten or pushed away.
                 </p>
