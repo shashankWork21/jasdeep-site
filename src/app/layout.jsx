@@ -12,6 +12,9 @@ export const metadata = {
   title: "Therapy with Jasdeep",
   description:
     "Experience transformative therapy with Jasdeep, a trained psychologist specializing in relationship healing, emotional intelligence, and authentic connections. Book a discovery call today.",
+  icons: {
+    icon: "/jasdeep-logo.png",
+  },
 };
 
 export default async function RootLayout({ children }) {
