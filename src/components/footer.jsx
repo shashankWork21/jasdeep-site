@@ -37,10 +37,10 @@ export default function Footer() {
               <li className="flex items-start">
                 <span className="text-gray-600 mr-3">🌐</span>
                 <a
-                  href="https://jasdeepjethani.com"
+                  href="https://jsadeepmago.com"
                   className="hover:text-[#fa5719]"
                 >
-                  jasdeepjethani.com
+                  jsadeepmago.com
                 </a>
               </li>
             </ul>
