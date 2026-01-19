@@ -162,7 +162,8 @@ exports.Prisma.UserScalarFieldEnum = {
   email: 'email',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
-  passwordHash: 'passwordHash'
+  passwordHash: 'passwordHash',
+  useCalendar: 'useCalendar'
 };
 
 exports.Prisma.ScheduleScalarFieldEnum = {

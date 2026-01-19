@@ -4836,6 +4836,7 @@ export namespace Prisma {
     createdAt: Date | null
     updatedAt: Date | null
     passwordHash: string | null
+    useCalendar: boolean | null
   }
 
   export type UserMaxAggregateOutputType = {
@@ -4846,6 +4847,7 @@ export namespace Prisma {
     createdAt: Date | null
     updatedAt: Date | null
     passwordHash: string | null
+    useCalendar: boolean | null
   }
 
   export type UserCountAggregateOutputType = {
@@ -4856,6 +4858,7 @@ export namespace Prisma {
     createdAt: number
     updatedAt: number
     passwordHash: number
+    useCalendar: number
     _all: number
   }
 
@@ -4868,6 +4871,7 @@ export namespace Prisma {
     createdAt?: true
     updatedAt?: true
     passwordHash?: true
+    useCalendar?: true
   }
 
   export type UserMaxAggregateInputType = {
@@ -4878,6 +4882,7 @@ export namespace Prisma {
     createdAt?: true
     updatedAt?: true
     passwordHash?: true
+    useCalendar?: true
   }
 
   export type UserCountAggregateInputType = {
@@ -4888,6 +4893,7 @@ export namespace Prisma {
     createdAt?: true
     updatedAt?: true
     passwordHash?: true
+    useCalendar?: true
     _all?: true
   }
 
@@ -4971,6 +4977,7 @@ export namespace Prisma {
     createdAt: Date
     updatedAt: Date
     passwordHash: string | null
+    useCalendar: boolean
     _count: UserCountAggregateOutputType | null
     _min: UserMinAggregateOutputType | null
     _max: UserMaxAggregateOutputType | null
@@ -4998,6 +5005,7 @@ export namespace Prisma {
     createdAt?: boolean
     updatedAt?: boolean
     passwordHash?: boolean
+    useCalendar?: boolean
     professionalSlots?: boolean | User$professionalSlotsArgs<ExtArgs>
     sessions?: boolean | User$sessionsArgs<ExtArgs>
     tokens?: boolean | User$tokensArgs<ExtArgs>
@@ -5013,6 +5021,7 @@ export namespace Prisma {
     createdAt?: boolean
     updatedAt?: boolean
     passwordHash?: boolean
+    useCalendar?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -5023,6 +5032,7 @@ export namespace Prisma {
     createdAt?: boolean
     updatedAt?: boolean
     passwordHash?: boolean
+    useCalendar?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectScalar = {
@@ -5033,9 +5043,10 @@ export namespace Prisma {
     createdAt?: boolean
     updatedAt?: boolean
     passwordHash?: boolean
+    useCalendar?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "firstName" | "lastName" | "email" | "createdAt" | "updatedAt" | "passwordHash", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "firstName" | "lastName" | "email" | "createdAt" | "updatedAt" | "passwordHash" | "useCalendar", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     professionalSlots?: boolean | User$professionalSlotsArgs<ExtArgs>
     sessions?: boolean | User$sessionsArgs<ExtArgs>
@@ -5062,6 +5073,7 @@ export namespace Prisma {
       createdAt: Date
       updatedAt: Date
       passwordHash: string | null
+      useCalendar: boolean
     }, ExtArgs["result"]["user"]>
     composites: {}
   }
@@ -5496,6 +5508,7 @@ export namespace Prisma {
     readonly createdAt: FieldRef<"User", 'DateTime'>
     readonly updatedAt: FieldRef<"User", 'DateTime'>
     readonly passwordHash: FieldRef<"User", 'String'>
+    readonly useCalendar: FieldRef<"User", 'Boolean'>
   }
     
 
@@ -8236,7 +8249,8 @@ export namespace Prisma {
     email: 'email',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
-    passwordHash: 'passwordHash'
+    passwordHash: 'passwordHash',
+    useCalendar: 'useCalendar'
   };
 
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -8353,6 +8367,13 @@ export namespace Prisma {
    * Reference to a field of type 'Scope'
    */
   export type EnumScopeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Scope'>
+    
+
+
+  /**
+   * Reference to a field of type 'Boolean'
+   */
+  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
     
 
 
@@ -8624,6 +8645,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     passwordHash?: StringNullableFilter<"User"> | string | null
+    useCalendar?: BoolFilter<"User"> | boolean
     professionalSlots?: SlotListRelationFilter
     sessions?: SessionListRelationFilter
     tokens?: TokenListRelationFilter
@@ -8638,6 +8660,7 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     passwordHash?: SortOrderInput | SortOrder
+    useCalendar?: SortOrder
     professionalSlots?: SlotOrderByRelationAggregateInput
     sessions?: SessionOrderByRelationAggregateInput
     tokens?: TokenOrderByRelationAggregateInput
@@ -8655,6 +8678,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     passwordHash?: StringNullableFilter<"User"> | string | null
+    useCalendar?: BoolFilter<"User"> | boolean
     professionalSlots?: SlotListRelationFilter
     sessions?: SessionListRelationFilter
     tokens?: TokenListRelationFilter
@@ -8669,6 +8693,7 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     passwordHash?: SortOrderInput | SortOrder
+    useCalendar?: SortOrder
     _count?: UserCountOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
     _min?: UserMinOrderByAggregateInput
@@ -8685,6 +8710,7 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     passwordHash?: StringNullableWithAggregatesFilter<"User"> | string | null
+    useCalendar?: BoolWithAggregatesFilter<"User"> | boolean
   }
 
   export type ScheduleWhereInput = {
@@ -9084,6 +9110,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     passwordHash?: string | null
+    useCalendar?: boolean
     professionalSlots?: SlotCreateNestedManyWithoutProfessionalInput
     sessions?: SessionCreateNestedManyWithoutUserInput
     tokens?: TokenCreateNestedManyWithoutUserInput
@@ -9098,6 +9125,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     passwordHash?: string | null
+    useCalendar?: boolean
     professionalSlots?: SlotUncheckedCreateNestedManyWithoutProfessionalInput
     sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
     tokens?: TokenUncheckedCreateNestedManyWithoutUserInput
@@ -9112,6 +9140,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    useCalendar?: BoolFieldUpdateOperationsInput | boolean
     professionalSlots?: SlotUpdateManyWithoutProfessionalNestedInput
     sessions?: SessionUpdateManyWithoutUserNestedInput
     tokens?: TokenUpdateManyWithoutUserNestedInput
@@ -9126,6 +9155,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    useCalendar?: BoolFieldUpdateOperationsInput | boolean
     professionalSlots?: SlotUncheckedUpdateManyWithoutProfessionalNestedInput
     sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
     tokens?: TokenUncheckedUpdateManyWithoutUserNestedInput
@@ -9140,6 +9170,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     passwordHash?: string | null
+    useCalendar?: boolean
   }
 
   export type UserUpdateManyMutationInput = {
@@ -9150,6 +9181,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    useCalendar?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type UserUncheckedUpdateManyInput = {
@@ -9160,6 +9192,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    useCalendar?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type ScheduleCreateInput = {
@@ -9571,6 +9604,11 @@ export namespace Prisma {
     expiresAt?: SortOrder
   }
 
+  export type BoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
+  }
+
   export type SlotListRelationFilter = {
     every?: SlotWhereInput
     some?: SlotWhereInput
@@ -9604,6 +9642,7 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     passwordHash?: SortOrder
+    useCalendar?: SortOrder
   }
 
   export type UserMaxOrderByAggregateInput = {
@@ -9614,6 +9653,7 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     passwordHash?: SortOrder
+    useCalendar?: SortOrder
   }
 
   export type UserMinOrderByAggregateInput = {
@@ -9624,6 +9664,15 @@ export namespace Prisma {
     createdAt?: SortOrder
     updatedAt?: SortOrder
     passwordHash?: SortOrder
+    useCalendar?: SortOrder
+  }
+
+  export type BoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
   }
 
   export type IntNullableListFilter<$PrismaModel = never> = {
@@ -9927,6 +9976,10 @@ export namespace Prisma {
     connect?: ScheduleWhereUniqueInput
   }
 
+  export type BoolFieldUpdateOperationsInput = {
+    set?: boolean
+  }
+
   export type SlotUpdateManyWithoutProfessionalNestedInput = {
     create?: XOR<SlotCreateWithoutProfessionalInput, SlotUncheckedCreateWithoutProfessionalInput> | SlotCreateWithoutProfessionalInput[] | SlotUncheckedCreateWithoutProfessionalInput[]
     connectOrCreate?: SlotCreateOrConnectWithoutProfessionalInput | SlotCreateOrConnectWithoutProfessionalInput[]
@@ -10197,6 +10250,19 @@ export namespace Prisma {
     _max?: NestedEnumSlotStatusFilter<$PrismaModel>
   }
 
+  export type NestedBoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
+  }
+
+  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
+  }
+
   export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel>
     in?: number[] | ListIntFieldRefInput<$PrismaModel>
@@ -10232,6 +10298,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     passwordHash?: string | null
+    useCalendar?: boolean
     sessions?: SessionCreateNestedManyWithoutUserInput
     tokens?: TokenCreateNestedManyWithoutUserInput
     schedule?: ScheduleCreateNestedOneWithoutProfessionalInput
@@ -10245,6 +10312,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     passwordHash?: string | null
+    useCalendar?: boolean
     sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
     tokens?: TokenUncheckedCreateNestedManyWithoutUserInput
     schedule?: ScheduleUncheckedCreateNestedOneWithoutProfessionalInput
@@ -10274,6 +10342,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    useCalendar?: BoolFieldUpdateOperationsInput | boolean
     sessions?: SessionUpdateManyWithoutUserNestedInput
     tokens?: TokenUpdateManyWithoutUserNestedInput
     schedule?: ScheduleUpdateOneWithoutProfessionalNestedInput
@@ -10287,6 +10356,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    useCalendar?: BoolFieldUpdateOperationsInput | boolean
     sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
     tokens?: TokenUncheckedUpdateManyWithoutUserNestedInput
     schedule?: ScheduleUncheckedUpdateOneWithoutProfessionalNestedInput
@@ -10321,6 +10391,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     passwordHash?: string | null
+    useCalendar?: boolean
     professionalSlots?: SlotCreateNestedManyWithoutProfessionalInput
     sessions?: SessionCreateNestedManyWithoutUserInput
     schedule?: ScheduleCreateNestedOneWithoutProfessionalInput
@@ -10334,6 +10405,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     passwordHash?: string | null
+    useCalendar?: boolean
     professionalSlots?: SlotUncheckedCreateNestedManyWithoutProfessionalInput
     sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
     schedule?: ScheduleUncheckedCreateNestedOneWithoutProfessionalInput
@@ -10390,6 +10462,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    useCalendar?: BoolFieldUpdateOperationsInput | boolean
     professionalSlots?: SlotUpdateManyWithoutProfessionalNestedInput
     sessions?: SessionUpdateManyWithoutUserNestedInput
     schedule?: ScheduleUpdateOneWithoutProfessionalNestedInput
@@ -10403,6 +10476,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    useCalendar?: BoolFieldUpdateOperationsInput | boolean
     professionalSlots?: SlotUncheckedUpdateManyWithoutProfessionalNestedInput
     sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
     schedule?: ScheduleUncheckedUpdateOneWithoutProfessionalNestedInput
@@ -10416,6 +10490,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     passwordHash?: string | null
+    useCalendar?: boolean
     professionalSlots?: SlotCreateNestedManyWithoutProfessionalInput
     tokens?: TokenCreateNestedManyWithoutUserInput
     schedule?: ScheduleCreateNestedOneWithoutProfessionalInput
@@ -10429,6 +10504,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     passwordHash?: string | null
+    useCalendar?: boolean
     professionalSlots?: SlotUncheckedCreateNestedManyWithoutProfessionalInput
     tokens?: TokenUncheckedCreateNestedManyWithoutUserInput
     schedule?: ScheduleUncheckedCreateNestedOneWithoutProfessionalInput
@@ -10488,6 +10564,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    useCalendar?: BoolFieldUpdateOperationsInput | boolean
     professionalSlots?: SlotUpdateManyWithoutProfessionalNestedInput
     tokens?: TokenUpdateManyWithoutUserNestedInput
     schedule?: ScheduleUpdateOneWithoutProfessionalNestedInput
@@ -10501,6 +10578,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    useCalendar?: BoolFieldUpdateOperationsInput | boolean
     professionalSlots?: SlotUncheckedUpdateManyWithoutProfessionalNestedInput
     tokens?: TokenUncheckedUpdateManyWithoutUserNestedInput
     schedule?: ScheduleUncheckedUpdateOneWithoutProfessionalNestedInput
@@ -10782,6 +10860,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     passwordHash?: string | null
+    useCalendar?: boolean
     professionalSlots?: SlotCreateNestedManyWithoutProfessionalInput
     sessions?: SessionCreateNestedManyWithoutUserInput
     tokens?: TokenCreateNestedManyWithoutUserInput
@@ -10795,6 +10874,7 @@ export namespace Prisma {
     createdAt?: Date | string
     updatedAt?: Date | string
     passwordHash?: string | null
+    useCalendar?: boolean
     professionalSlots?: SlotUncheckedCreateNestedManyWithoutProfessionalInput
     sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
     tokens?: TokenUncheckedCreateNestedManyWithoutUserInput
@@ -10824,6 +10904,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    useCalendar?: BoolFieldUpdateOperationsInput | boolean
     professionalSlots?: SlotUpdateManyWithoutProfessionalNestedInput
     sessions?: SessionUpdateManyWithoutUserNestedInput
     tokens?: TokenUpdateManyWithoutUserNestedInput
@@ -10837,6 +10918,7 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     passwordHash?: NullableStringFieldUpdateOperationsInput | string | null
+    useCalendar?: BoolFieldUpdateOperationsInput | boolean
     professionalSlots?: SlotUncheckedUpdateManyWithoutProfessionalNestedInput
     sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
     tokens?: TokenUncheckedUpdateManyWithoutUserNestedInput

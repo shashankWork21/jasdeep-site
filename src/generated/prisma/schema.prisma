@@ -76,6 +76,7 @@ model User {
   updatedAt         DateTime  @updatedAt
   passwordHash      String?
   professionalSlots Slot[]    @relation("Professional to Slot mapping")
+  useCalendar       Boolean   @default(false)
   sessions          Session[]
   tokens            Token[]
   schedule          Schedule?
